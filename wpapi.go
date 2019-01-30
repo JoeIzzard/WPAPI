@@ -28,3 +28,7 @@ func apiURLBuilderPlugin(slug string, testing bool) string {
 func apiURLBuilderTheme(slug string, testing bool) string {
 	return apiURLBuilderBaseURL(testing) + "themes/info/1.1/?action=theme_information&request[slug]=" + slug
 }
+
+func apiURLBuilderPluginTranslation(slug string, version string, testing bool) string {
+	return apiURLBuilderBaseURL(testing) + "translations/plugins/1.0/?slug=" + slug + "&version=" + version
+}
