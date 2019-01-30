@@ -16,3 +16,7 @@ func apiURLBuilderBaseURL(testing bool) string {
 func apiURLBuilderSecret(testing bool) string {
 	return apiURLBuilderBaseURL(testing) + "secret-key/1.1/salt"
 }
+
+func apiURLBuilderStability(testing bool) string {
+	return apiURLBuilderBaseURL(testing) + "core/stable-check/1.0"
+}
