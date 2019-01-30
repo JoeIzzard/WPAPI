@@ -89,3 +89,21 @@ func TestApiURLBuilderPlugin(t *testing.T) {
 		t.Error(funcName + " (Func) Failed: Returned '" + res + "' with the testing option true. Expected '" + mock + "'")
 	}
 }
+
+func TestApiURLBuilderTheme(t *testing.T) {
+	slug := "twentynineteen"
+	endpoint := "themes/info/1.1/?action=theme_information&request[slug]=" + slug
+	live := "https://api.wordpress.org/" + endpoint
+	mock := "https://93167486-1f77-4f71-a2e2-9d3098460682.mock.pstmn.io/" + endpoint
+	funcName := "API URL Builder Theme"
+
+	// Live URL
+	if res := apiURLBuilderTheme(slug, false); res != live {
+		t.Error(funcName + " (Func) Failed: Returned '" + res + "' with the testing option false. Expected '" + live + "'")
+	}
+
+	// Mock Server URL
+	if res := apiURLBuilderTheme(slug, true); res != mock {
+		t.Error(funcName + " (Func) Failed: Returned '" + res + "' with the testing option true. Expected '" + mock + "'")
+	}
+}
