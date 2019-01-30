@@ -20,3 +20,7 @@ func apiURLBuilderSecret(testing bool) string {
 func apiURLBuilderStability(testing bool) string {
 	return apiURLBuilderBaseURL(testing) + "core/stable-check/1.0"
 }
+
+func apiURLBuilderPlugin(slug string, testing bool) string {
+	return apiURLBuilderBaseURL(testing) + "plugin/info/1.0/" + slug + ".json"
+}
