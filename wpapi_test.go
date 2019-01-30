@@ -92,7 +92,8 @@ func TestApiURLBuilderPlugin(t *testing.T) {
 
 func TestApiURLBuilderTheme(t *testing.T) {
 	slug := "twentynineteen"
-	endpoint := "themes/info/1.1/?action=theme_information&request[slug]=" + slug
+	allFields := "&request[fields][description]=1&request[fields][sections]=1&request[fields][rating]=1&request[fields][ratings]=1&request[fields][downloaded]=1&request[fields][download_link]=1&request[fields][last_updated]=1&request[fields][homepage]=1&request[fields][tags]=1&request[fields][template]=1&request[fields][parent]=1&request[fields][versions]=1&request[fields][screenshot_url]=1&request[fields][active_installs]=1"
+	endpoint := "themes/info/1.1/?action=theme_information&request[slug]=" + slug + allFields
 	live := "https://api.wordpress.org/" + endpoint
 	mock := "https://93167486-1f77-4f71-a2e2-9d3098460682.mock.pstmn.io/" + endpoint
 	funcName := "API URL Builder Theme"

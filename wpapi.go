@@ -26,7 +26,12 @@ func apiURLBuilderPlugin(slug string, testing bool) string {
 }
 
 func apiURLBuilderTheme(slug string, testing bool) string {
-	return apiURLBuilderBaseURL(testing) + "themes/info/1.1/?action=theme_information&request[slug]=" + slug
+	// --- Note ---
+	/*
+		The Wordpress.org API emmits certains fields by default. The allFields variables tells the API to return all of the available fields in it's response
+	*/
+	allFields := "&request[fields][description]=1&request[fields][sections]=1&request[fields][rating]=1&request[fields][ratings]=1&request[fields][downloaded]=1&request[fields][download_link]=1&request[fields][last_updated]=1&request[fields][homepage]=1&request[fields][tags]=1&request[fields][template]=1&request[fields][parent]=1&request[fields][versions]=1&request[fields][screenshot_url]=1&request[fields][active_installs]=1"
+	return apiURLBuilderBaseURL(testing) + "themes/info/1.1/?action=theme_information&request[slug]=" + slug + allFields
 }
 
 func apiURLBuilderPluginTranslation(slug string, version string, testing bool) string {
