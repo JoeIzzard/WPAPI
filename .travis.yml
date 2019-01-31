@@ -1,29 +1,28 @@
 language: go
 
-# Force-enable Go modules. This will be unnecessary when Go 1.12 lands.
 env:
   - GO111MODULE=on
+  global:
+    - CC_TEST_REPORTER_ID=3792e2667b73b4d48c209971071266709a71502569d15b42341d82861c52c01f
 
-# You don't need to test on very old version of the Go compiler. It's the user's
-# responsibility to keep their compilers up to date.
 go:
-  - 1.11.x
   - master
 
-# Only clone the most recent commit.
 git:
   depth: 1
 
-# Skip the install step. Don't `go get` dependencies. Only build with the code
-# in vendor/
 install: true
 
-# Don't email me the results of the test runs.
 notifications:
   email: true
 
-# script always runs to completion (set +e). If we have linter issues AND a
-# failing test, we want to see both. Configure golangci-lint with a
-# .golangci.yml file at the top level of your repo.
+  before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
 script:
-  - go test -v -race ./...  # Run all the tests with the race detector enabled
+  - go test -v -race -coverprofile c.out ./...  
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
