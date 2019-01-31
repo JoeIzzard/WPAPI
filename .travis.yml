@@ -1,7 +1,6 @@
 language: go
 
 env:
-  - GO111MODULE=on
   global:
     - CC_TEST_REPORTER_ID=3792e2667b73b4d48c209971071266709a71502569d15b42341d82861c52c01f
 
@@ -16,7 +15,7 @@ install: true
 notifications:
   email: true
 
-  before_script:
+before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
