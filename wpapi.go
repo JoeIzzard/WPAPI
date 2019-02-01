@@ -22,7 +22,8 @@ func apiURLBuilderStability(testing bool) string {
 }
 
 func apiURLBuilderPlugin(slug string, testing bool) string {
-	return apiURLBuilderBaseURL(testing) + "plugin/info/1.0/" + slug + ".json"
+	allFields := "&request[fields][active_installs]=1&request[fields][contributors]=1"
+	return apiURLBuilderBaseURL(testing) + "plugins/info/1.1/?action=plugin_information&request[slug]=" + slug + allFields
 }
 
 func apiURLBuilderTheme(slug string, testing bool) string {
