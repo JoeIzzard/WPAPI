@@ -239,8 +239,8 @@ func PluginName(slug string) (name string, err error) {
 	return plug.Name, err
 }
 
-// PluginVersion returns the version string of the plugin as a string. Uses the slug argument as the identifier provided to the WordPress.org API
-func PluginVersion(slug string) (version string, err error) {
+// PluginCurrentVersion returns the version string of the plugin as a string. Uses the slug argument as the identifier provided to the WordPress.org API
+func PluginCurrentVersion(slug string) (version string, err error) {
 	plug, err := generatePlugin(slug)
 	return plug.Version, err
 }
@@ -405,6 +405,17 @@ func PluginTags(slug string) (tags []string, err error) {
 func PluginVersions(slug string) (versions map[string]version, err error) {
 	plug, err := generatePlugin(slug)
 	return plug.Versions, err
+}
+
+func PluginVersion(slug string, versionSlug string) (ver version, err error) {
+	plug, err := generatePlugin(slug)
+	if val, ok := plug.Versions[versionSlug]; ok {
+		return val, err
+	}
+	if err == nil {
+		return version{}, errors.New("Version does not exist")
+	}
+	return version{}, err
 }
 
 // PluginContributors returns a map of contributor structs containing the information of each contributor. Uses the slug argument as the identifier provided to the WordPress.org API
