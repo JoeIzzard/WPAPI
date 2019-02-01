@@ -357,6 +357,12 @@ func PluginDownloads(slug string) (downloads int, err error) {
 	return plug.Downloads, err
 }
 
+// PluginActiveInstalls returns the number of active installs in a rounded estimate figure. Uses the slug argument as the identifier provided to the WordPress.org API
+func PluginActiveInstalls(slug string) (installs int, err error) {
+	plug, err := generatePlugin(slug)
+	return plug.ActiveInstalls, err
+}
+
 // PluginLastUpdate returns the date and time of the last update to the plugin as a string. Uses the slug argument as the identifier provided to the WordPress.org API
 func PluginLastUpdate(slug string) (updated string, err error) {
 	plug, err := generatePlugin(slug)
