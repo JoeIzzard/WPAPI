@@ -63,7 +63,7 @@ type plugin struct {
 	DownloadLink   string
 	Screenshots    []screenshot
 	Tags           []string
-	Versions       []version
+	Versions       map[string]version
 	DonateLink     string
 	Contributors   map[string]contributor
 }
@@ -190,6 +190,7 @@ func generatePlugin(slug string) (plug plugin, err error) {
 	// *** Versions ***
 	if reflect.TypeOf(raw.Raw["versions"]).Kind() == ans {
 		versionMap := raw.Raw["versions"].(map[string]interface{})
+		versions := make(map[string]version)
 		for key, value := range versionMap {
 			newVersion := version{}
 
@@ -202,8 +203,9 @@ func generatePlugin(slug string) (plug plugin, err error) {
 			newVersion.Version = key
 			newVersion.Link = value.(string)
 
-			plug.Versions = append(plug.Versions, newVersion)
+			versions[key] = newVersion
 		}
+		plug.Versions = versions
 	}
 
 	// Donate Link
@@ -400,7 +402,7 @@ func PluginTags(slug string) (tags []string, err error) {
 }
 
 // PluginVersions returns an array of version structs containing the information for all of the plugins available versions. Uses the slug argument as the identifier provided to the WordPress.org API
-func PluginVersions(slug string) (versions []version, err error) {
+func PluginVersions(slug string) (versions map[string]version, err error) {
 	plug, err := generatePlugin(slug)
 	return plug.Versions, err
 }
