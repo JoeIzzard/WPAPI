@@ -1,6 +1,7 @@
 package wpapi
 
 import (
+	"errors"
 	"math"
 	"os"
 	"reflect"
@@ -388,10 +389,28 @@ func PluginTags(slug string) (tags []string, err error) {
 	return plug.Tags, err
 }
 
-// PluginVersions returns an array of version structs containin the information for all of the plugins available versions. Uses the slug argument as the identifier provided to the WordPress.org API
+// PluginVersions returns an array of version structs containing the information for all of the plugins available versions. Uses the slug argument as the identifier provided to the WordPress.org API
 func PluginVersions(slug string) (versions []version, err error) {
 	plug, err := generatePlugin(slug)
 	return plug.Versions, err
+}
+
+// PluginContributors returns a map of contributor structs containing the information of each contributor. Uses the slug argument as the identifier provided to the WordPress.org API
+func PluginContributors(slug string) (contrib map[string]contributor, err error) {
+	plug, err := generatePlugin(slug)
+	return plug.Contributors, err
+}
+
+// PluginContributor returns a contributor struct containing the information of the specific contributor requested. Uses the slug argument as the identifer provided to the WordPress.org API; and the contrib slug as the contributor slug
+func PluginContributor(slug string, contrib string) (contribO contributor, err error) {
+	plug, err := generatePlugin(slug)
+	if val, ok := plug.Contributors[contrib]; ok {
+		return val, err
+	}
+	if err == nil {
+		return contributor{}, errors.New("Contributor does not exist")
+	}
+	return contributor{}, err
 }
 
 // PluginDonateLink returns the the URL to the plugins donation page. Uses the slug argument as the identifier provided to the WordPress.org API
