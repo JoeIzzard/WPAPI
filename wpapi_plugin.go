@@ -46,25 +46,26 @@ type contributor struct {
 }
 
 type plugin struct {
-	Name         string
-	Slug         string
-	Version      string
-	Author       author
-	Tested       string
-	RequiredWP   string
-	RequiresPHP  phpVersion
-	Rating       rating
-	Support      support
-	Downloads    int
-	LastUpdate   string
-	Added        string
-	Homepage     string
-	DownloadLink string
-	Screenshots  []screenshot
-	Tags         []string
-	Versions     []version
-	DonateLink   string
-	Contributors map[string]contributor
+	Name           string
+	Slug           string
+	Version        string
+	Author         author
+	Tested         string
+	RequiredWP     string
+	RequiresPHP    phpVersion
+	Rating         rating
+	Support        support
+	Downloads      int
+	ActiveInstalls int
+	LastUpdate     string
+	Added          string
+	Homepage       string
+	DownloadLink   string
+	Screenshots    []screenshot
+	Tags           []string
+	Versions       []version
+	DonateLink     string
+	Contributors   map[string]contributor
 }
 
 func getPlugin(slug string) (raw rawData, err error) {
@@ -146,6 +147,9 @@ func generatePlugin(slug string) (plug plugin, err error) {
 
 	// Downloads
 	plug.Downloads = int(raw.Raw["downloaded"].(float64))
+
+	// Active Installs
+	plug.ActiveInstalls = int(raw.Raw["active_installs"].(float64))
 
 	// Last Update
 	plug.LastUpdate = raw.Raw["last_updated"].(string)
