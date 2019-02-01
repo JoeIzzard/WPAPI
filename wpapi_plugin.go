@@ -39,6 +39,11 @@ type screenshot struct {
 	SRC     string
 }
 
+type contributor struct {
+	Slug string
+	URL  string
+}
+
 type plugin struct {
 	Name         string
 	Slug         string
@@ -58,6 +63,7 @@ type plugin struct {
 	Tags         []string
 	Versions     []version
 	DonateLink   string
+	Contributors map[string]contributor
 }
 
 func getPlugin(slug string) (raw rawData, err error) {
@@ -104,7 +110,7 @@ func generatePlugin(slug string) (plug plugin, err error) {
 	// Required WordPress Version
 	plug.RequiredWP = raw.Raw["requires"].(string)
 
-	// // Required PHP Version
+	// Required PHP Version
 	switch raw.Raw["requires_php"].(type) {
 	case bool:
 		plug.RequiresPHP.Provided = false
@@ -197,6 +203,19 @@ func generatePlugin(slug string) (plug plugin, err error) {
 
 	// Donate Link
 	plug.DonateLink = raw.Raw["donate_link"].(string)
+
+	// *** Contributors ***
+	if reflect.TypeOf(raw.Raw["contributors"]).Kind() == ans {
+		contributorsMap := raw.Raw["contributors"].(map[string]interface{})
+		contrib := make(map[string]contributor)
+		for key, value := range contributorsMap {
+			temp := contributor{}
+			temp.Slug = key
+			temp.URL = value.(string)
+			contrib[key] = temp
+		}
+		plug.Contributors = contrib
+	}
 
 	return plug, err
 }
