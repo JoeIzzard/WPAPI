@@ -407,6 +407,7 @@ func PluginVersions(slug string) (versions map[string]version, err error) {
 	return plug.Versions, err
 }
 
+// PluginVersion returns a specific versions struct containing the information about that version. Uses the slug argument as the identifier provided to the WordPress.org API and the VersionSlug as the version number to return.
 func PluginVersion(slug string, versionSlug string) (ver version, err error) {
 	plug, err := generatePlugin(slug)
 	if val, ok := plug.Versions[versionSlug]; ok {
