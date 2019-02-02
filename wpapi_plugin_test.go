@@ -199,3 +199,23 @@ func TestPluginRequiredPHP(t *testing.T) {
 	// Disable Debug Mode
 	os.Setenv("WPAPIDEBUG", "0")
 }
+
+func TestPluginRatingOverall(t *testing.T) {
+	// Enable Debug Mode
+	os.Setenv("WPAPIDEBUG", "1")
+
+	test, err := PluginRatingOverall("jetpack")
+	res := 78
+	name := "Plugin Rating Overall"
+
+	if test != res {
+		t.Errorf(name+" (Func) Failed: Returned '%d', expected '%d'", test, res)
+	}
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	// Disable Debug Mode
+	os.Setenv("WPAPIDEBUG", "0")
+}
