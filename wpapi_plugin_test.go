@@ -64,3 +64,23 @@ func TestPluginAuthorName(t *testing.T) {
 	// Disable Debug Mode
 	os.Setenv("WPAPIDEBUG", "0")
 }
+
+func TestPluginAuthorProfile(t *testing.T) {
+	// Enable Debug Mode
+	os.Setenv("WPAPIDEBUG", "1")
+
+	test, err := PluginAuthorProfile("jetpack")
+	res := "https://profiles.wordpress.org/automattic"
+	name := "Plugin Author Profile"
+
+	if test != res {
+		t.Error(name + " (Func) Failed: Returned '" + test + "', expected '" + res + "'")
+	}
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	// Disable Debug Mode
+	os.Setenv("WPAPIDEBUG", "0")
+}
