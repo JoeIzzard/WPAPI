@@ -497,3 +497,23 @@ func TestPluginSupportThreadsClosed(t *testing.T) {
 	// Disable Debug Mode
 	os.Setenv("WPAPIDEBUG", "0")
 }
+
+func TestPluginSupportThreadsSolvedPercentage(t *testing.T) {
+	// Enable Debug Mode
+	os.Setenv("WPAPIDEBUG", "1")
+
+	test, err := PluginSupportThreadsSolvedPercentage("jetpack")
+	res := 89
+	name := "Plugin Support Threads Solved Percentage"
+
+	if test != res {
+		t.Errorf(name+" (Func) Failed: Returned '%d', expected '%d'", test, res)
+	}
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	// Disable Debug Mode
+	os.Setenv("WPAPIDEBUG", "0")
+}
