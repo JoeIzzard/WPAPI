@@ -287,6 +287,12 @@ func PluginRequiredPHP(slug string) (version phpVersion, err error) {
 	return plug.RequiresPHP, err
 }
 
+// PluginRating returns the rating struct for the plugin. Uses the slug argument as the identifier provided to the WordPress.org API
+func PluginRating(slug string) (plugRating rating, err error) {
+	plug, err := generatePlugin(slug)
+	return plug.Rating, err
+}
+
 // PluginRatingOverall returns the overall rating of the plugin expressed as an int out of 100. Uses the slug argument as the identifier provided to the WordPress.org API
 func PluginRatingOverall(slug string) (overall int, err error) {
 	plug, err := generatePlugin(slug)
