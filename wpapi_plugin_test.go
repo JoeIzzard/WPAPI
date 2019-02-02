@@ -44,3 +44,23 @@ func TestPluginCurrentVersion(t *testing.T) {
 	// Disable Debug Mode
 	os.Setenv("WPAPIDEBUG", "0")
 }
+
+func TestPluginAuthorName(t *testing.T) {
+	// Enable Debug Mode
+	os.Setenv("WPAPIDEBUG", "1")
+
+	test, err := PluginAuthorName("jetpack")
+	res := "Automattic"
+	name := "Plugin Author Name"
+
+	if test != res {
+		t.Error(name + " (Func) Failed: Returned '" + test + "', expected '" + res + "'")
+	}
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	// Disable Debug Mode
+	os.Setenv("WPAPIDEBUG", "0")
+}
