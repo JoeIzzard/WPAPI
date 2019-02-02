@@ -637,3 +637,38 @@ func TestPluginDownloadLink(t *testing.T) {
 	// Disable Debug Mode
 	os.Setenv("WPAPIDEBUG", "0")
 }
+
+func TestPluginScreenshots(t *testing.T) {
+	// Enable Debug Mode
+	os.Setenv("WPAPIDEBUG", "1")
+
+	// Test with Screenshots
+	test, err := PluginScreenshots("jetpack")
+	len1 := len(test)
+	lenRes := 8
+	name := "Plugin Screenshots"
+
+	if len1 != lenRes {
+		t.Errorf(name+" (Func) Failed: Returned '%d', expected '%d'", len1, lenRes)
+	}
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	// Test with no Screenshots
+	test2, err2 := PluginScreenshots("hello-dolly")
+	len2 := len(test2)
+	lenRes2 := 0
+
+	if len2 != lenRes2 {
+		t.Errorf(name+" (Func) Failed [No Screenshots Test]: Returned '%d', expected '%d'", len2, lenRes2)
+	}
+
+	if err2 != nil {
+		t.Error(err2)
+	}
+
+	// Disable Debug Mode
+	os.Setenv("WPAPIDEBUG", "0")
+}
