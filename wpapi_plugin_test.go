@@ -84,3 +84,23 @@ func TestPluginAuthorProfile(t *testing.T) {
 	// Disable Debug Mode
 	os.Setenv("WPAPIDEBUG", "0")
 }
+
+func TestPluginAuthorLink(t *testing.T) {
+	// Enable Debug Mode
+	os.Setenv("WPAPIDEBUG", "1")
+
+	test, err := PluginAuthorLink("jetpack")
+	res := "https://jetpack.com"
+	name := "Plugin Author Link"
+
+	if test != res {
+		t.Error(name + " (Func) Failed: Returned '" + test + "', expected '" + res + "'")
+	}
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	// Disable Debug Mode
+	os.Setenv("WPAPIDEBUG", "0")
+}
