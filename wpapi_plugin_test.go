@@ -200,6 +200,64 @@ func TestPluginRequiredPHP(t *testing.T) {
 	os.Setenv("WPAPIDEBUG", "0")
 }
 
+func TestPluginRating(t *testing.T) {
+	// Enable Debug Mode
+	os.Setenv("WPAPIDEBUG", "1")
+
+	test, err := PluginRating("jetpack")
+	name := "Plugin Rating"
+	overall := 78
+	oneStar := 256
+	twoStar := 62
+	threeStar := 75
+	fourStar := 122
+	fiveStar := 844
+	totalRatings := 1359
+
+	// Overall
+	if test.Overall != overall {
+		t.Errorf(name+" (Func) Failed: Overall rating returned incorrect, Returned '%d', expected '%d'", test.Overall, overall)
+	}
+
+	// One Star
+	if test.Stars.One != oneStar {
+		t.Errorf(name+" (Func) Failed: One Star rating returned incorrect, Returned '%d', expected '%d'", test.Stars.One, oneStar)
+	}
+
+	// Two Star
+	if test.Stars.Two != twoStar {
+		t.Errorf(name+" (Func) Failed: Two Star rating returned incorrect, Returned '%d', expected '%d'", test.Stars.Two, twoStar)
+	}
+
+	// Three Star
+	if test.Stars.Three != threeStar {
+		t.Errorf(name+" (Func) Failed: Three Star rating returned incorrect, Returned '%d', expected '%d'", test.Stars.Three, threeStar)
+	}
+
+	// Four Star
+	if test.Stars.Four != fourStar {
+		t.Errorf(name+" (Func) Failed: Four Star rating returned incorrect, Returned '%d', expected '%d'", test.Stars.Four, fourStar)
+	}
+
+	// Five Star
+	if test.Stars.Five != fiveStar {
+		t.Errorf(name+" (Func) Failed: Five Star rating returned incorrect, Returned '%d', expected '%d'", test.Stars.Five, fiveStar)
+	}
+
+	// Number
+	if test.Number != totalRatings {
+		t.Errorf(name+" (Func) Failed: Total Number of Ratings returned incorrect, Returned '%d', expected '%d'", test.Number, totalRatings)
+	}
+
+	// Error Check
+	if err != nil {
+		t.Error(err)
+	}
+
+	// Disable Debug Mode
+	os.Setenv("WPAPIDEBUG", "0")
+}
+
 func TestPluginRatingOverall(t *testing.T) {
 	// Enable Debug Mode
 	os.Setenv("WPAPIDEBUG", "1")
