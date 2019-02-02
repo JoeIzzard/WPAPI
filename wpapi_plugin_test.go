@@ -164,3 +164,38 @@ func TestPluginRequiredWPVersion(t *testing.T) {
 	// Disable Debug Mode
 	os.Setenv("WPAPIDEBUG", "0")
 }
+
+func TestPluginRequiredPHP(t *testing.T) {
+	// Enable Debug Mode
+	os.Setenv("WPAPIDEBUG", "1")
+
+	// False Test
+	test, err := PluginRequiredPHP("jetpack")
+	name := "Plugin Required PHP"
+
+	if test.Provided != false {
+		t.Error(name + " (Func) Failed: Didn't return 'false' with Jetpack")
+	}
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	// Specified Test
+	test2, err2 := PluginRequiredPHP("wordpress-seo")
+
+	if test2.Provided != true {
+		t.Error(name + " (Func) Failed: Didn't return 'true' with WordPress SEO")
+	}
+
+	if test2.Version != "5.2.4" {
+		t.Error(name + " (Func) Failed: Returned '" + test2.Version + "', expected '5.2.4'")
+	}
+
+	if err2 != nil {
+		t.Error(err)
+	}
+
+	// Disable Debug Mode
+	os.Setenv("WPAPIDEBUG", "0")
+}
