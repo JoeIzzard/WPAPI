@@ -24,3 +24,23 @@ func TestPluginName(t *testing.T) {
 	// Disable Debug Mode
 	os.Setenv("WPAPIDEBUG", "0")
 }
+
+func TestPluginCurrentVersion(t *testing.T) {
+	// Enable Debug Mode
+	os.Setenv("WPAPIDEBUG", "1")
+
+	test, err := PluginCurrentVersion("jetpack")
+	res := "6.9"
+	name := "Plugin Current Version"
+
+	if test != res {
+		t.Error(name + " (Func) Failed: Returned '" + test + "', expected '" + res + "'")
+	}
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	// Disable Debug Mode
+	os.Setenv("WPAPIDEBUG", "0")
+}
