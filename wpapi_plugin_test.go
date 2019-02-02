@@ -357,3 +357,23 @@ func TestPluginRatingFourStar(t *testing.T) {
 	// Disable Debug Mode
 	os.Setenv("WPAPIDEBUG", "0")
 }
+
+func TestPluginRatingFiveStar(t *testing.T) {
+	// Enable Debug Mode
+	os.Setenv("WPAPIDEBUG", "1")
+
+	test, err := PluginRatingFiveStar("jetpack")
+	res := 844
+	name := "Plugin Rating Five Star"
+
+	if test != res {
+		t.Errorf(name+" (Func) Failed: Returned '%d', expected '%d'", test, res)
+	}
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	// Disable Debug Mode
+	os.Setenv("WPAPIDEBUG", "0")
+}
