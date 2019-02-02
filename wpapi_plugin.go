@@ -335,6 +335,12 @@ func PluginRatingNumber(slug string) (number int, err error) {
 	return plug.Rating.Number, err
 }
 
+// PluginSupport returns the complete support struct including all data related to
+func PluginSupport(slug string) (supp support, err error) {
+	plug, err := generatePlugin(slug)
+	return plug.Support, err
+}
+
 // PluginSupportThreads returns the total number (as an int) of support threads for the plugin. Uses the slug argument as the identifier provided to the WordPress.org API
 func PluginSupportThreads(slug string) (threads int, err error) {
 	plug, err := generatePlugin(slug)
