@@ -278,7 +278,7 @@ func TestPluginRatingOverall(t *testing.T) {
 	os.Setenv("WPAPIDEBUG", "0")
 }
 
-func TestPluginOneStar(t *testing.T) {
+func TestPluginRatingOneStar(t *testing.T) {
 	// Enable Debug Mode
 	os.Setenv("WPAPIDEBUG", "1")
 
