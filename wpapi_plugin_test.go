@@ -672,3 +672,38 @@ func TestPluginScreenshots(t *testing.T) {
 	// Disable Debug Mode
 	os.Setenv("WPAPIDEBUG", "0")
 }
+
+func TestPluginTags(t *testing.T) {
+	// Enable Debug Mode
+	os.Setenv("WPAPIDEBUG", "1")
+
+	// Test with Tags
+	test, err := PluginTags("jetpack")
+	len1 := len(test)
+	lenRes := 5
+	name := "Plugin Tags"
+
+	if len1 != lenRes {
+		t.Errorf(name+" (Func) Failed: Returned '%d', expected '%d'", len1, lenRes)
+	}
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	// Test with no tags
+	test2, err2 := PluginTags("hello-dolly")
+	len2 := len(test2)
+	lenRes2 := 0
+
+	if len2 != lenRes2 {
+		t.Errorf(name+" (Func) Failed [No Screenshots Test]: Returned '%d', expected '%d'", len2, lenRes2)
+	}
+
+	if err2 != nil {
+		t.Error(err2)
+	}
+
+	// Disable Debug Mode
+	os.Setenv("WPAPIDEBUG", "0")
+}
