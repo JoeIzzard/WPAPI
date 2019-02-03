@@ -2,6 +2,7 @@ package wpapi
 
 import (
 	"os"
+	"strconv"
 	"testing"
 )
 
@@ -698,6 +699,60 @@ func TestPluginTags(t *testing.T) {
 
 	if len2 != lenRes2 {
 		t.Errorf(name+" (Func) Failed [No Screenshots Test]: Returned '%d', expected '%d'", len2, lenRes2)
+	}
+
+	if err2 != nil {
+		t.Error(err2)
+	}
+
+	// Disable Debug Mode
+	os.Setenv("WPAPIDEBUG", "0")
+}
+
+func TestPluginVersion(t *testing.T) {
+	// Enable Debug Mode
+	os.Setenv("WPAPIDEBUG", "1")
+
+	name := "Plugin Version"
+
+	// Actual Release
+	test1, err1 := PluginVersion("jetpack", "6.9")
+	res1Version := "6.9"
+	res1PreRelease := false
+	res1Link := "https://downloads.wordpress.org/plugin/jetpack.6.9.zip"
+
+	if test1.Version != res1Version {
+		t.Error(name + " (Func) Failed [Version]: Returned '" + test1.Version + "', expected '" + res1Version + "'")
+	}
+
+	if test1.PreRelease != res1PreRelease {
+		t.Error(name + " (Func) Failed [PreRelease]: Returned '" + strconv.FormatBool(test1.PreRelease) + "', expected '" + strconv.FormatBool(res1PreRelease) + "'")
+	}
+
+	if test1.Link != res1Link {
+		t.Error(name + " (Func) Failed [Link]: Returned '" + test1.Link + "', expected '" + res1Link + "'")
+	}
+
+	if err1 != nil {
+		t.Error(err1)
+	}
+
+	// Beta Release
+	test2, err2 := PluginVersion("jetpack", "7.0-beta")
+	res2Version := "7.0-beta"
+	res2PreRelease := true
+	res2Link := "https://downloads.wordpress.org/plugin/jetpack.7.0-beta.zip"
+
+	if test2.Version != res2Version {
+		t.Error(name + " (Func) Failed [Version]: Returned '" + test2.Version + "', expected '" + res2Version + "'")
+	}
+
+	if test2.PreRelease != res2PreRelease {
+		t.Error(name + " (Func) Failed [PreRelease]: Returned '" + strconv.FormatBool(test2.PreRelease) + "', expected '" + strconv.FormatBool(res2PreRelease) + "'")
+	}
+
+	if test2.Link != res2Link {
+		t.Error(name + " (Func) Failed [Link]: Returned '" + test2.Link + "', expected '" + res2Link + "'")
 	}
 
 	if err2 != nil {
