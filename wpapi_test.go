@@ -74,7 +74,8 @@ func TestApiURLBuilderStability(t *testing.T) {
 
 func TestApiURLBuilderPlugin(t *testing.T) {
 	slug := "jetpack"
-	endpoint := "plugin/info/1.0/" + slug + ".json"
+	allFields := "&request[fields][active_installs]=1&request[fields][contributors]=1"
+	endpoint := "plugins/info/1.1/?action=plugin_information&request[slug]=" + slug + allFields
 	live := "https://api.wordpress.org/" + endpoint
 	mock := "https://93167486-1f77-4f71-a2e2-9d3098460682.mock.pstmn.io/" + endpoint
 	funcName := "API URL Builder Plugin"

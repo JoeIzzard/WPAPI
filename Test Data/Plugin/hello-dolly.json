@@ -1,0 +1,42 @@
+{
+    "name": "Hello Dolly",
+    "slug": "hello-dolly",
+    "version": "1.6",
+    "author": "<a href=\"https://ma.tt/\">Matt Mullenweg</a>",
+    "author_profile": "https://profiles.wordpress.org/matt",
+    "contributors": {
+        "matt": "https://profiles.wordpress.org/matt"
+    },
+    "requires": "4.6",
+    "tested": "4.9.9",
+    "requires_php": false,
+    "compatibility": [],
+    "rating": 52,
+    "ratings": {
+        "1": 114,
+        "2": 7,
+        "3": 5,
+        "4": 6,
+        "5": 70
+    },
+    "num_ratings": 202,
+    "support_threads": 1,
+    "support_threads_resolved": 0,
+    "active_installs": 1000000,
+    "downloaded": 718791,
+    "last_updated": "2018-03-18 10:46am GMT",
+    "added": "2008-07-06",
+    "homepage": "https://wordpress.org/plugins/hello-dolly/",
+    "sections": {
+        "description": "<p>This is not just a plugin, it symbolizes the hope and enthusiasm of an entire generation summed up in two words sung most famously by Louis Armstrong: Hello, Dolly. When activated you will randomly see a lyric from Hello, Dolly in the upper right of your admin screen on every page.</p>\n"
+    },
+    "download_link": "https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip",
+    "screenshots": [],
+    "tags": [],
+    "versions": {
+        "1.5": "https://downloads.wordpress.org/plugin/hello-dolly.1.5.zip",
+        "1.6": "https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip",
+        "trunk": "https://downloads.wordpress.org/plugin/hello-dolly.zip"
+    },
+    "donate_link": ""
+}

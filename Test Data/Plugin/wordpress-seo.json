@@ -1,0 +1,120 @@
+{
+    "name": "Yoast SEO",
+    "slug": "wordpress-seo",
+    "version": "9.5",
+    "author": "<a href=\"https://yoa.st/1uk\">Team Yoast</a>",
+    "author_profile": "https://profiles.wordpress.org/joostdevalk",
+    "contributors": {
+        "yoast": "https://profiles.wordpress.org/yoast",
+        "joostdevalk": "https://profiles.wordpress.org/joostdevalk",
+        "tacoverdo": "https://profiles.wordpress.org/tacoverdo",
+        "omarreiss": "https://profiles.wordpress.org/omarreiss",
+        "atimmer": "https://profiles.wordpress.org/atimmer",
+        "jipmoors": "https://profiles.wordpress.org/jipmoors"
+    },
+    "requires": "4.9",
+    "tested": "5.0.3",
+    "requires_php": "5.2.4",
+    "compatibility": [],
+    "rating": 98,
+    "ratings": {
+        "0": 1,
+        "1": 495,
+        "2": 102,
+        "3": 134,
+        "4": 566,
+        "5": 23748
+    },
+    "num_ratings": 25046,
+    "support_threads": 437,
+    "support_threads_resolved": 384,
+    "active_installs": 5000000,
+    "downloaded": 150711207,
+    "last_updated": "2019-01-22 8:40am GMT",
+    "added": "2010-10-11",
+    "homepage": "https://yoa.st/1uj",
+    "sections": {
+        "description": "<h3>Yoast SEO: the #1 WordPress SEO plugin</h3>\n<p>Need some help with your search engine optimization? Need an SEO plugin that helps you reach for the stars? Yoast SEO is the original WordPress SEO plugin since 2008. It is the favorite tool of millions of users, ranging from the bakery around the corner to some of the most popular sites on the planet. With Yoast SEO, you get a solid toolset that helps you aim for that number one spot in the search results. Yoast: SEO for everyone.</p>\n<p>Yoast SEO does everything in its power to please both visitors and search engine spiders. How? Below you’ll find a small sampling of the powers of Yoast SEO:</p>\n<h4>Taking care of your WordPress SEO</h4>\n<ul>\n<li>The most advanced XML Sitemaps functionality at the push of a button.</li>\n<li>Full control over site breadcrumbs: add a piece of code and you’re good to go.</li>\n<li>Set canonical URLs to avoid duplicate content. Never have to worry about Google penalties again.</li>\n<li>Title and meta description templating for better branding and consistent snippets in the search results.</li>\n<li><strong>[Premium]</strong> Expand Yoast SEO with the News SEO, Video SEO, Local SEO and WooCommerce SEO extensions.</li>\n<li><strong>[Premium]</strong> Need help? Yoast SEO Premium users get 1 year free access to our awesome support team.</li>\n</ul>\n<blockquote>\n<p>Note: some features are Premium. Which means you need Yoast SEO Premium to unlock those features. You can <a href=\"https://yoa.st/1v8\" rel=\"nofollow\">get Yoast SEO Premium here</a>!</p>\n</blockquote>\n<h4>Write killer content with Yoast SEO</h4>\n<ul>\n<li>Content &amp; SEO analysis: Invaluable tools to write SEO-friendly texts.</li>\n<li>The snippet preview shows you how your post or page will look in the search results &#8211; even on mobile. Yoast SEO Premium even has social media previews!</li>\n<li><strong>[Premium]</strong> The Insights tool shows you what your text focuses on so you can keep your article in line with your keyphrases.</li>\n<li><strong>[Premium]</strong> Synonyms &amp; related keyphrases: Optimize your article for synonyms and related keyphrases.</li>\n<li><strong>[Premium]</strong> Automatic internal linking suggestions: write your article and get automatic suggested posts to link to.</li>\n</ul>\n<h4>Keep your site in perfect shape</h4>\n<ul>\n<li>Yoast SEO tunes the engine of your site so you can work on creating great content.</li>\n<li>Our cornerstone content and internal linking features help you optimize your site structure in a breeze.</li>\n<li>Integrates with Google Search Console: See how your site performs in the search engines and fix crawl errors.</li>\n<li>Manage SEO roles: Give your colleagues access to specific sections of the Yoast SEO plugin.</li>\n<li>Bulk editor: Make large-scale edits to your site.</li>\n<li><strong>[Premium]</strong> Social previews to manage the way your page is shared on social networks like Facebook and Twitter.</li>\n<li><strong>[Premium]</strong> Redirect manager: It keeps your site healthy by easily redirecting errors from Google Search Console, deleted pages and changed URLs.</li>\n</ul>\n<h3>Premium support</h3>\n<p>The Yoast team does not always provide active support for the Yoast SEO plugin on the WordPress.org forums, as we prioritize our email support. One-on-one email support is available to people who <a href=\"https://yoa.st/1v8\" rel=\"nofollow\">bought Yoast SEO Premium</a> only.</p>\n<p>Note that the <a href=\"https://yoa.st/1v8\" rel=\"nofollow\">Yoast SEO Premium</a> also has several extra features too, including the option to have synonyms and related keyphrases, internal linking suggestions, cornerstone content checks and a redirect manager, so it is well worth your investment!</p>\n<p>You should also check out the <a href=\"https://yoa.st/1uu\" rel=\"nofollow\">Yoast Local SEO</a>, <a href=\"https://yoa.st/1uv\" rel=\"nofollow\">Yoast News SEO</a> and <a href=\"https://yoa.st/1uw\" rel=\"nofollow\">Yoast Video SEO</a> extensions to Yoast SEO. They work with the free version of Yoast SEO already, and these premium extensions of course come with support too.</p>\n<h3>Bug reports</h3>\n<p>Bug reports for Yoast SEO are <a href=\"https://github.com/Yoast/wordpress-seo\" rel=\"nofollow\">welcomed on GitHub</a>. Please note GitHub is not a support forum, and issues that aren’t properly qualified as bugs will be closed.</p>\n<h3>Further Reading</h3>\n<p>For more info on search engine optimization, check out the following:</p>\n<ul>\n<li>The <a href=\"https://yoa.st/1v8\" rel=\"nofollow\">Yoast SEO Plugin</a> official homepage.</li>\n<li>The <a href=\"https://yoa.st/1va\" rel=\"nofollow\">Yoast SEO Knowledgebase</a>.</li>\n<li><a href=\"https://yoa.st/1v6\" rel=\"nofollow\">WordPress SEO &#8211; The definitive Guide by Yoast</a>.</li>\n<li>Other <a href=\"https://yoa.st/1v9\" rel=\"nofollow\">WordPress Plugins</a> by the same team.</li>\n<li>Follow Yoast on <a href=\"https://facebook.com/yoast\" rel=\"nofollow\">Facebook</a> &amp; <a href=\"https://twitter.com/yoast\" rel=\"nofollow\">Twitter</a>.</li>\n</ul>\n<h3>From within WordPress</h3>\n<ol>\n<li>Visit &#8216;Plugins &gt; Add New&#8217;</li>\n<li>Search for &#8216;Yoast SEO&#8217;</li>\n<li>Activate Yoast SEO from your Plugins page.</li>\n<li>Go to &#8220;after activation&#8221; below.</li>\n</ol>\n<h3>Manually</h3>\n<ol>\n<li>Upload the <code>wordpress-seo</code> folder to the <code>/wp-content/plugins/</code> directory</li>\n<li>Activate the Yoast SEO plugin through the &#8216;Plugins&#8217; menu in WordPress</li>\n<li>Go to &#8220;after activation&#8221; below.</li>\n</ol>\n<h3>After activation</h3>\n<ol>\n<li>You should see (a notice to start) the Yoast SEO configuration wizard.</li>\n<li>Go through the configuration wizard and set up the plugin for your site.</li>\n<li>You&#8217;re done!</li>\n</ol>\n",
+        "faq": "<p>You&#8217;ll find answers to many of your questions on <a href=\"https://yoa.st/1va\" rel=\"nofollow\">kb.yoast.com</a>.</p>\n",
+        "changelog": "<h4>9.5.0</h4>\n<p>Release Date: January 22nd, 2019</p>\n<p>Enhancements:</p>\n<ul>\n<li>Completes the readabilty analysis for Swedish by adding the transition words, sentence beginnings and passive voice assessments.</li>\n<li>Improves the transition word assessment for German.</li>\n</ul>\n<p>Bugfixes:</p>\n<ul>\n<li>Fixes a bug where the Ryte endpoint would be called when the Ryte feature has been disabled.</li>\n<li>Fixes a bug where the &#8216;Show archives for authors without posts in search results?&#8217; toggle would be shown when the &#8216;Show author archives in search results?&#8217; toggle was disabled in the search appearance settings.</li>\n<li>Fixes a bug where the front page would be shown in the page sitemap. Props to <a href=\"https://github.com/stodorovic\" rel=\"nofollow\">stodorovic</a>.</li>\n<li>Fixes a bug where errors would be thrown in the classic editor when Gutenberg assets were enqueued without Gutenberg being active.</li>\n<li>Fixes a bug where the editor would not be loaded when clicking the ‘edit’ button for a child page in the page overview. Props <a href=\"https://github.com/mondrey\" rel=\"nofollow\">mondrey</a>.</li>\n</ul>\n<p>Deprecated:</p>\n<ul>\n<li>Deprecates the methods WPSEO_Utils::get_user_locale() and WPSEO_Utils::get_language().</li>\n</ul>\n<p>Other:</p>\n<ul>\n<li>Adds a Courses Page showing an overview of the available online courses offered by Yoast Academy.</li>\n</ul>\n<h4>9.4.0</h4>\n<p>Release Date: January 8th, 2019</p>\n<p>Content analysis recalibration (beta):</p>\n<ul>\n<li>Adds a toggle feature for subscribing to the recalibration beta under SEO -&gt; General -&gt; Features.</li>\n<li>When the recalibration feature is enabled:\n<ul>\n<li>The single title assessment is added. This assessment makes sure that you don&#8217;t use superfluous H1s in your text.</li>\n<li>Assessments changes:</li>\n<li>Keyphrase density: changes scoring schema to account for the length of the keyphrase and changes feedback strings so that we give feedback about the number of occurrences rather than a percentage.</li>\n<li>Outbound links assessment: changes the scoring schema so that red bullet instead of an orange bullet is shown when you have no outbound links.</li>\n<li>Image alt attributes: if there are at least 5 images, checks whether the alt tags contain the keyphrase or synoynyms in 30-70% of all images. If there are less than 5 images, 1 image with the keyphrase or synonym in the alt tag is still scored as good.</li>\n<li>Keyphrase in title: function words preceding the exact match keyphrase are ignored when determining the position of the keyphrase in the title.</li>\n<li>Keyphrase length: makes the scoring scheme less strict for languages that don&#8217;t have function word support, so that for these languages keyphrases with 1-6 words are scored as green, 7-9 as orange, and more than 9 as red.</li>\n<li>Keyphrase in subheading: only takes H2 and H3 level subheadings into account and changes the scoring schema so that 30%-75% of these subheadings need to include the keyphrase or its synonyms. In languages without function word support, a match is only counted if all the words from the keyphrase/synonym appear in the subheading.</li>\n<li>Text length: on taxonomy pages, the recommended minimum text length is increased from 150 to 250 words.</li>\n<li>Assessment removals:</li>\n<li>The assessment checking the length or your URL.</li>\n<li>The assessment checking whether your URL contains stopwords.</li>\n</ul>\n</li>\n</ul>\n<p>Enhancements:</p>\n<ul>\n<li>Improve accessibility of the analysis results.</li>\n<li>Improve accessibility of the Title Separator setting.</li>\n<li>Adds a new filter for adjacent-rel links: <code>wpseo_adjacent_rel_url</code>.</li>\n</ul>\n<p>Bugfixes:</p>\n<ul>\n<li>Fixes a bug where special characters from certain word lists weren&#8217;t correctly escaped when matched with a regex. This resulted in <code>eggs</code> being incorrectly matched as the transition word <code>e.g.</code>, for example.</li>\n<li>Fixes a bug where the search appearance setting for a custom content type named <code>profile</code> would have a broken layout.</li>\n<li>Fixes a bug where pagination elements were not shown in the Genesis theme.</li>\n</ul>\n<p>Other:</p>\n<ul>\n<li>Uses method <code>is_simple_page</code> instead of <code>is_singular</code> in method robots. Props to: <a href=\"https://github.com/stodorovic\" rel=\"nofollow\">stodorovic</a></li>\n<li>Adds method <code>is_woocommerce_active</code> and check is woocommerce activate before registering hooks. Props to <a href=\"https://github.com/stodorovic\" rel=\"nofollow\">stodorovic</a></li>\n<li>Adds static variables to &#8220;cache&#8221; results of functions <a href=\"https://docs.woocommerce.com/wc-apidocs/function-is_shop.html\" rel=\"nofollow\"><code>is_shop</code></a> and <a href=\"https://docs.woocommerce.com/wc-apidocs/function-wc_get_page_id.html\" rel=\"nofollow\"><code>wc_get_page_id</code></a>. Props to <a href=\"https://github.com/stodorovic\" rel=\"nofollow\">stodorovic</a></li>\n<li>Verifies that variable <code>post</code> is an instance of <code>WP_Post</code> in <code>WPSEO_Admin_Bar_Menu ::get_singular_post()</code>. Props to <a href=\"https://github.com/yingles\" rel=\"nofollow\">@yingles</a>.</li>\n<li>Improves strings to be more easily translated. Props to <a href=\"https://github.com/pedro-mendonca\" rel=\"nofollow\">pedro-mendonca</a></li>\n<li>The browser console now shows more descriptive error messages when something went wrong during analyses in the web worker.</li>\n<li>Avoids irrelevant warning and error in the WPEngine PHP Compatibility plugin.</li>\n</ul>\n<h4>Earlier versions</h4>\n<p>For the changelog of earlier versions, please refer to <a href=\"https://yoa.st/yoast-seo-changelog\" rel=\"nofollow\">the Yoast SEO changelog on yoast.com</a></p>\n",
+        "screenshots": "<ol><li><a href=\"https://ps.w.org/wordpress-seo/assets/screenshot-1.png?rev=1961113\"><img src=\"https://ps.w.org/wordpress-seo/assets/screenshot-1.png?rev=1961113\" alt=\"The Yoast SEO plugin general meta box. You&#039;ll see this on edit post pages, for posts, pages and custom post types.\"></a><p>The Yoast SEO plugin general meta box. You'll see this on edit post pages, for posts, pages and custom post types.</p></li><li><a href=\"https://ps.w.org/wordpress-seo/assets/screenshot-2.png?rev=1961113\"><img src=\"https://ps.w.org/wordpress-seo/assets/screenshot-2.png?rev=1961113\" alt=\"Example of the SEO analysis functionality.\"></a><p>Example of the SEO analysis functionality.</p></li><li><a href=\"https://ps.w.org/wordpress-seo/assets/screenshot-3.png?rev=1961113\"><img src=\"https://ps.w.org/wordpress-seo/assets/screenshot-3.png?rev=1961113\" alt=\"Example of the readability analysis functionality.\"></a><p>Example of the readability analysis functionality.</p></li><li><a href=\"https://ps.w.org/wordpress-seo/assets/screenshot-4.png?rev=1834347\"><img src=\"https://ps.w.org/wordpress-seo/assets/screenshot-4.png?rev=1834347\" alt=\"Overview of site-wide SEO problems and possible improvements.\"></a><p>Overview of site-wide SEO problems and possible improvements.</p></li><li><a href=\"https://ps.w.org/wordpress-seo/assets/screenshot-5.png?rev=1834347\"><img src=\"https://ps.w.org/wordpress-seo/assets/screenshot-5.png?rev=1834347\" alt=\"Control over which features you want to use.\"></a><p>Control over which features you want to use.</p></li><li><a href=\"https://ps.w.org/wordpress-seo/assets/screenshot-6.png?rev=1834347\"><img src=\"https://ps.w.org/wordpress-seo/assets/screenshot-6.png?rev=1834347\" alt=\"Easily import SEO data from other SEO plugins like All In One SEO pack, HeadSpace2 SEO and wpSEO.de.\"></a><p>Easily import SEO data from other SEO plugins like All In One SEO pack, HeadSpace2 SEO and wpSEO.de.</p></li></ol>"
+    },
+    "download_link": "https://downloads.wordpress.org/plugin/wordpress-seo.9.5.zip",
+    "screenshots": {
+        "1": {
+            "src": "https://ps.w.org/wordpress-seo/assets/screenshot-1.png?rev=1961113",
+            "caption": "The Yoast SEO plugin general meta box. You'll see this on edit post pages, for posts, pages and custom post types."
+        },
+        "2": {
+            "src": "https://ps.w.org/wordpress-seo/assets/screenshot-2.png?rev=1961113",
+            "caption": "Example of the SEO analysis functionality."
+        },
+        "3": {
+            "src": "https://ps.w.org/wordpress-seo/assets/screenshot-3.png?rev=1961113",
+            "caption": "Example of the readability analysis functionality."
+        },
+        "4": {
+            "src": "https://ps.w.org/wordpress-seo/assets/screenshot-4.png?rev=1834347",
+            "caption": "Overview of site-wide SEO problems and possible improvements."
+        },
+        "5": {
+            "src": "https://ps.w.org/wordpress-seo/assets/screenshot-5.png?rev=1834347",
+            "caption": "Control over which features you want to use."
+        },
+        "6": {
+            "src": "https://ps.w.org/wordpress-seo/assets/screenshot-6.png?rev=1834347",
+            "caption": "Easily import SEO data from other SEO plugins like All In One SEO pack, HeadSpace2 SEO and wpSEO.de."
+        }
+    },
+    "tags": {
+        "content-analysis": "Content analysis",
+        "google-search-console": "google search console",
+        "readability": "Readability",
+        "seo": "seo",
+        "xml-sitemap": "xml sitemap"
+    },
+    "versions": {
+        "7.0": "https://downloads.wordpress.org/plugin/wordpress-seo.7.0.zip",
+        "7.0.1": "https://downloads.wordpress.org/plugin/wordpress-seo.7.0.1.zip",
+        "7.0.2": "https://downloads.wordpress.org/plugin/wordpress-seo.7.0.2.zip",
+        "7.0.3": "https://downloads.wordpress.org/plugin/wordpress-seo.7.0.3.zip",
+        "7.1": "https://downloads.wordpress.org/plugin/wordpress-seo.7.1.zip",
+        "7.2": "https://downloads.wordpress.org/plugin/wordpress-seo.7.2.zip",
+        "7.3": "https://downloads.wordpress.org/plugin/wordpress-seo.7.3.zip",
+        "7.4": "https://downloads.wordpress.org/plugin/wordpress-seo.7.4.zip",
+        "7.4.1": "https://downloads.wordpress.org/plugin/wordpress-seo.7.4.1.zip",
+        "7.4.2": "https://downloads.wordpress.org/plugin/wordpress-seo.7.4.2.zip",
+        "7.5": "https://downloads.wordpress.org/plugin/wordpress-seo.7.5.zip",
+        "7.5.1": "https://downloads.wordpress.org/plugin/wordpress-seo.7.5.1.zip",
+        "7.5.3": "https://downloads.wordpress.org/plugin/wordpress-seo.7.5.3.zip",
+        "7.6": "https://downloads.wordpress.org/plugin/wordpress-seo.7.6.zip",
+        "7.6.1": "https://downloads.wordpress.org/plugin/wordpress-seo.7.6.1.zip",
+        "7.7": "https://downloads.wordpress.org/plugin/wordpress-seo.7.7.zip",
+        "7.7.1": "https://downloads.wordpress.org/plugin/wordpress-seo.7.7.1.zip",
+        "7.7.2": "https://downloads.wordpress.org/plugin/wordpress-seo.7.7.2.zip",
+        "7.7.3": "https://downloads.wordpress.org/plugin/wordpress-seo.7.7.3.zip",
+        "7.8": "https://downloads.wordpress.org/plugin/wordpress-seo.7.8.zip",
+        "7.9": "https://downloads.wordpress.org/plugin/wordpress-seo.7.9.zip",
+        "7.9.1": "https://downloads.wordpress.org/plugin/wordpress-seo.7.9.1.zip",
+        "8.0": "https://downloads.wordpress.org/plugin/wordpress-seo.8.0.zip",
+        "8.1": "https://downloads.wordpress.org/plugin/wordpress-seo.8.1.zip",
+        "8.1.1": "https://downloads.wordpress.org/plugin/wordpress-seo.8.1.1.zip",
+        "8.1.2": "https://downloads.wordpress.org/plugin/wordpress-seo.8.1.2.zip",
+        "8.2": "https://downloads.wordpress.org/plugin/wordpress-seo.8.2.zip",
+        "8.2.1": "https://downloads.wordpress.org/plugin/wordpress-seo.8.2.1.zip",
+        "8.3": "https://downloads.wordpress.org/plugin/wordpress-seo.8.3.zip",
+        "8.4": "https://downloads.wordpress.org/plugin/wordpress-seo.8.4.zip",
+        "9.0": "https://downloads.wordpress.org/plugin/wordpress-seo.9.0.zip",
+        "9.0.1": "https://downloads.wordpress.org/plugin/wordpress-seo.9.0.1.zip",
+        "9.0.2": "https://downloads.wordpress.org/plugin/wordpress-seo.9.0.2.zip",
+        "9.0.3": "https://downloads.wordpress.org/plugin/wordpress-seo.9.0.3.zip",
+        "9.1": "https://downloads.wordpress.org/plugin/wordpress-seo.9.1.zip",
+        "9.2": "https://downloads.wordpress.org/plugin/wordpress-seo.9.2.zip",
+        "9.2.1": "https://downloads.wordpress.org/plugin/wordpress-seo.9.2.1.zip",
+        "9.3": "https://downloads.wordpress.org/plugin/wordpress-seo.9.3.zip",
+        "9.4": "https://downloads.wordpress.org/plugin/wordpress-seo.9.4.zip",
+        "9.5": "https://downloads.wordpress.org/plugin/wordpress-seo.9.5.zip",
+        "trunk": "https://downloads.wordpress.org/plugin/wordpress-seo.zip"
+    },
+    "donate_link": "https://yoa.st/1up"
+}
