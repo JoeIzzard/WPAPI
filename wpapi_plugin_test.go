@@ -847,3 +847,38 @@ func TestPluginContributor(t *testing.T) {
 	// Disable Debug Mode
 	os.Setenv("WPAPIDEBUG", "0")
 }
+
+func TestPluginContributors(t *testing.T) {
+	// Enable Debug Mode
+	os.Setenv("WPAPIDEBUG", "1")
+
+	test, err := PluginContributors("jetpack")
+	name := "Plugin Contributors"
+	resSlug := "automattic"
+	resLink := "https://profiles.wordpress.org/automattic"
+	testCount := len(test)
+	resCount := 95
+
+	if contrib, ok := test[resSlug]; ok {
+		if contrib.Slug != resSlug {
+			t.Error(name + " (Func) Failed [Slug]: Returned '" + contrib.Slug + "', expected '" + resSlug + "'")
+		}
+
+		if contrib.URL != resLink {
+			t.Error(name + " (Func) Failed [URL]: Returned '" + contrib.URL + "', expected '" + resLink + "'")
+		}
+	} else {
+		t.Error(name + " (Func) Failed: Missing a test slug")
+	}
+
+	if testCount != resCount {
+		t.Errorf(name+" (Func) Failed [Count]: Returned '%d', expected '%d'", testCount, resCount)
+	}
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	// Disable Debug Mode
+	os.Setenv("WPAPIDEBUG", "0")
+}
