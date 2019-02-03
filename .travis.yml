@@ -3,6 +3,7 @@ language: go
 env:
   global:
     - CC_TEST_REPORTER_ID=3792e2667b73b4d48c209971071266709a71502569d15b42341d82861c52c01f
+    - CODECOV_TOKEN="c1800f0b-a091-4e8f-a9f1-f43a92eb6d8f"
 
 go:
   - master
