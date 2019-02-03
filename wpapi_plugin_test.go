@@ -6,6 +6,215 @@ import (
 	"testing"
 )
 
+func TestGetPlugin(t *testing.T) {
+	// Enable Debug Mode
+	os.Setenv("WPAPIDEBUG", "1")
+
+	Plugin, err := GetPlugin("jetpack")
+	name := "Get Plugin"
+
+	res := &plugin{
+		Name:    "Jetpack by WordPress.com",
+		Slug:    "jetpack",
+		Version: "6.9",
+		Author: author{
+			Name:    "Automattic",
+			Profile: "https://profiles.wordpress.org/automattic",
+			Slug:    "automattic",
+			Link:    "https://jetpack.com",
+		},
+		Tested:     "5.0.3",
+		RequiredWP: "4.8",
+		RequiresPHP: phpVersion{
+			Provided: false,
+			Version:  "",
+		},
+		Rating: rating{
+			Overall: 78,
+			Stars: stars{
+				One:   256,
+				Two:   62,
+				Three: 75,
+				Four:  122,
+				Five:  844,
+			},
+			Number: 1359,
+		},
+		Support: support{
+			Threads: threads{
+				Total:  198,
+				Solved: 177,
+				Open:   21,
+			},
+			SolvedPercentage: 89,
+		},
+		Downloads:      107462381,
+		ActiveInstalls: 5000000,
+		LastUpdate:     "2019-01-10 2:48pm GMT",
+		Added:          "2011-01-20",
+		Homepage:       "https://jetpack.com",
+		DownloadLink:   "https://downloads.wordpress.org/plugin/jetpack.6.9.zip",
+	}
+	lenScreenshots := 8
+	lenTags := 5
+	lenVersions := 76
+
+	// Test the Name
+	if Plugin.Name != res.Name {
+		t.Error(name + " (Func) Failed [Name]: Returned '" + Plugin.Name + "', expected '" + res.Name + "'")
+	}
+
+	// Slug
+	if Plugin.Slug != res.Slug {
+		t.Error(name + " (Func) Failed [Slug]: Returned '" + Plugin.Slug + "', expected '" + res.Slug + "'")
+	}
+
+	// ---- Author ----
+	// Name
+	if Plugin.Author.Name != res.Author.Name {
+		t.Error(name + " (Func) Failed [Author Name]: Returned '" + Plugin.Author.Name + "', expected '" + res.Author.Name + "'")
+	}
+
+	// Profile
+	if Plugin.Author.Profile != res.Author.Profile {
+		t.Error(name + " (Func) Failed [Author Profile]: Returned '" + Plugin.Author.Profile + "', expected '" + res.Author.Profile + "'")
+	}
+
+	// Link
+	if Plugin.Author.Link != res.Author.Link {
+		t.Error(name + " (Func) Failed [Author Link]: Returned '" + Plugin.Author.Link + "', expected '" + res.Author.Link + "'")
+	}
+
+	// Slug
+	if Plugin.Author.Slug != res.Author.Slug {
+		t.Error(name + " (Func) Failed [Author Slug]: Returned '" + Plugin.Author.Slug + "', expected '" + res.Author.Slug + "'")
+	}
+
+	// Tested
+	if Plugin.Tested != res.Tested {
+		t.Error(name + " (Func) Failed [Tested]: Returned '" + Plugin.Tested + "', expected '" + res.Tested + "'")
+	}
+
+	// Required WP
+	if Plugin.RequiredWP != res.RequiredWP {
+		t.Error(name + " (Func) Failed [Required WP]: Returned '" + Plugin.RequiredWP + "', expected '" + res.RequiredWP + "'")
+	}
+
+	// Required PHP
+	if Plugin.RequiresPHP.Provided != false {
+		t.Error(name + " (Func) Failed [Required PHP Provided]: Returned '" + strconv.FormatBool(Plugin.RequiresPHP.Provided) + "', expected '" + strconv.FormatBool(res.RequiresPHP.Provided) + "'")
+	}
+
+	if Plugin.RequiresPHP.Version != res.RequiresPHP.Version {
+		t.Error(name + " (Func) Failed [Required PHP Version]: Returned '" + Plugin.RequiresPHP.Version + "', expected '" + res.RequiresPHP.Version + "'")
+	}
+
+	// ----- Rating -----
+	// Overall
+	if Plugin.Rating.Overall != res.Rating.Overall {
+		t.Errorf(name+" (Func) Failed [Rating - Overall]: Returned '%d', expected '%d'", Plugin.Rating.Overall, res.Rating.Overall)
+	}
+
+	// Stars 1
+	if Plugin.Rating.Stars.One != res.Rating.Stars.One {
+		t.Errorf(name+" (Func) Failed [Rating - One Stars]: Returned '%d', expected '%d'", Plugin.Rating.Stars.One, res.Rating.Stars.One)
+	}
+
+	// Stars 12
+	if Plugin.Rating.Stars.Two != res.Rating.Stars.Two {
+		t.Errorf(name+" (Func) Failed [Rating - Two Stars]: Returned '%d', expected '%d'", Plugin.Rating.Stars.Two, res.Rating.Stars.Two)
+	}
+
+	// Stars 3
+	if Plugin.Rating.Stars.Three != res.Rating.Stars.Three {
+		t.Errorf(name+" (Func) Failed [Rating - Three Stars]: Returned '%d', expected '%d'", Plugin.Rating.Stars.Three, res.Rating.Stars.Three)
+	}
+
+	// Stars 4
+	if Plugin.Rating.Stars.Four != res.Rating.Stars.Four {
+		t.Errorf(name+" (Func) Failed [Rating - Four Stars]: Returned '%d', expected '%d'", Plugin.Rating.Stars.Four, res.Rating.Stars.Four)
+	}
+
+	// Stars 5
+	if Plugin.Rating.Stars.Five != res.Rating.Stars.Five {
+		t.Errorf(name+" (Func) Failed [Rating - Five Stars]: Returned '%d', expected '%d'", Plugin.Rating.Stars.Five, res.Rating.Stars.Five)
+	}
+
+	// Number
+	if Plugin.Rating.Number != res.Rating.Number {
+		t.Errorf(name+" (Func) Failed [Rating - Number]: Returned '%d', expected '%d'", Plugin.Rating.Number, res.Rating.Number)
+	}
+
+	// ----- Support -----
+	// Support Threads
+	if Plugin.Support.Threads.Total != res.Support.Threads.Total {
+		t.Errorf(name+" (Func) Failed [Support - Total Threads]: Returned '%d', expected '%d'", Plugin.Support.Threads.Total, res.Support.Threads.Total)
+	}
+
+	// Support Threads Solved
+	if Plugin.Support.Threads.Solved != res.Support.Threads.Solved {
+		t.Errorf(name+" (Func) Failed [Support - Solved Threads]: Returned '%d', expected '%d'", Plugin.Support.Threads.Solved, res.Support.Threads.Solved)
+	}
+
+	// Support Threads Open
+	if Plugin.Support.Threads.Open != res.Support.Threads.Open {
+		t.Errorf(name+" (Func) Failed [Support - Open Threads]: Returned '%d', expected '%d'", Plugin.Support.Threads.Open, res.Support.Threads.Open)
+	}
+
+	// Solved Percentage
+	if Plugin.Support.SolvedPercentage != res.Support.SolvedPercentage {
+		t.Errorf(name+" (Func) Failed [Support - Solved Percentage]: Returned '%d', expected '%d'", Plugin.Support.SolvedPercentage, res.Support.SolvedPercentage)
+	}
+
+	// Downloads
+	if Plugin.Downloads != res.Downloads {
+		t.Errorf(name+" (Func) Failed [Downloads]: Returned '%d', expected '%d'", Plugin.Downloads, res.Downloads)
+	}
+
+	// Last Update
+	if Plugin.LastUpdate != res.LastUpdate {
+		t.Error(name + " (Func) Failed [Last Update]: Returned '" + Plugin.LastUpdate + "', expected '" + res.LastUpdate + "'")
+	}
+
+	// Added
+	if Plugin.Added != res.Added {
+		t.Error(name + " (Func) Failed [Added]: Returned '" + Plugin.Added + "', expected '" + res.Added + "'")
+	}
+
+	// Homepage
+	if Plugin.Homepage != res.Homepage {
+		t.Error(name + " (Func) Failed [Downloads]: Returned '" + Plugin.Homepage + "', expected '" + res.Homepage + "'")
+	}
+
+	// Download Link
+	if Plugin.DownloadLink != res.DownloadLink {
+		t.Error(name + " (Func) Failed [Download Link]: Returned '" + Plugin.DownloadLink + "', expected '" + res.DownloadLink + "'")
+	}
+
+	// Screenshots
+	if len(Plugin.Screenshots) != lenScreenshots {
+		t.Errorf(name+" (Func) Failed [Screenshots - Length]: Returned '%d', expected '%d'", len(Plugin.Screenshots), lenScreenshots)
+	}
+
+	// Tags
+	if len(Plugin.Tags) != lenTags {
+		t.Errorf(name+" (Func) Failed [Tags - Length]: Returned '%d', expected '%d'", len(Plugin.Tags), lenTags)
+	}
+
+	// Versions
+	if len(Plugin.Versions) != lenVersions {
+		t.Errorf(name+" (Func) Failed [Versions - Length]: Returned '%d', expected '%d'", len(Plugin.Versions), lenVersions)
+	}
+
+	// Error Check
+	if err != nil {
+		t.Error(err)
+	}
+
+	// Disable Debug Mode
+	os.Setenv("WPAPIDEBUG", "0")
+}
+
 func TestPluginName(t *testing.T) {
 	// Enable Debug Mode
 	os.Setenv("WPAPIDEBUG", "1")
@@ -759,6 +968,13 @@ func TestPluginVersion(t *testing.T) {
 		t.Error(err2)
 	}
 
+	// Non existent Release
+	_, err := PluginVersion("jetpack", "FakeyMcFakeFake")
+
+	if err == nil {
+		t.Error(name + " (Func) Failed: Didn't return an error for non existent version")
+	}
+
 	// Disable Debug Mode
 	os.Setenv("WPAPIDEBUG", "0")
 }
@@ -842,6 +1058,13 @@ func TestPluginContributor(t *testing.T) {
 
 	if err != nil {
 		t.Error(err)
+	}
+
+	// Non Existent Contributor
+	_, err2 := PluginContributor("jetpack", "FakeyMcFakeFake")
+
+	if err2 == nil {
+		t.Error(name + " (Func) Failed: Didn't return an error for fake contributor")
 	}
 
 	// Disable Debug Mode
