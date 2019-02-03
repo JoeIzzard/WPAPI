@@ -822,3 +822,28 @@ func TestPluginVersions(t *testing.T) {
 	// Disable Debug Mode
 	os.Setenv("WPAPIDEBUG", "0")
 }
+
+func TestPluginContributor(t *testing.T) {
+	// Enable Debug Mode
+	os.Setenv("WPAPIDEBUG", "1")
+
+	test, err := PluginContributor("jetpack", "automattic")
+	name := "Plugin Contributor"
+	resSlug := "automattic"
+	resLink := "https://profiles.wordpress.org/automattic"
+
+	if test.Slug != resSlug {
+		t.Error(name + " (Func) Failed [Slug]: Returned '" + test.Slug + "', expected '" + resSlug + "'")
+	}
+
+	if test.URL != resLink {
+		t.Error(name + " (Func) Failed [URL]: Returned '" + test.URL + "', expected '" + resLink + "'")
+	}
+
+	if err != nil {
+		t.Error(err)
+	}
+
+	// Disable Debug Mode
+	os.Setenv("WPAPIDEBUG", "0")
+}
